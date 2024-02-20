@@ -146,13 +146,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "flutter_application_1",
+      "name": "jp_flutter_portfolio",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2024-02-20T04:10:52.856325Z",
+  "generated": "2024-02-20T06:02:52.334058Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
