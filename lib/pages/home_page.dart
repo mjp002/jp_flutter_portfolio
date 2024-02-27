@@ -8,6 +8,7 @@ import 'package:jp_flutter_portfolio/commons/styles.dart';
 import 'package:jp_flutter_portfolio/widgets/header_desktop.dart';
 import 'package:jp_flutter_portfolio/widgets/site_logo.dart';
 import 'package:jp_flutter_portfolio/widgets/header_mobile.dart';
+import 'package:jp_flutter_portfolio/widgets/drawer_mobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -17,17 +18,24 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       backgroundColor: AppTheme.scaffoldBg,
+      endDrawer: const DrawerMobile(),
       body: ListView(
         scrollDirection: Axis.vertical,
         children: [
           // Main
           // HeaderDesktop(),
           HeaderMobile(
-            onMenuTap: () {},
+            onLogoTap: () {},
+            onMenuTap: () {
+              scaffoldKey.currentState?.openEndDrawer();
+            },
           ),
 
           // Skills
